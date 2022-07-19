@@ -2,7 +2,7 @@
 
 @section('container')
 
-    <h1>Halaman Blog Posts</h1>
+    <h1>Post Category: {{ $category }}</h1>
 
     @foreach ($posts as $post)
     <article class="mb-5">
@@ -13,4 +13,5 @@
         <p>{{ $post->excerpt }}</p>
         @endforeach
     </article>
+
 @endsection
