@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('home', [
+        "title" => "HOME"
+    ]);
+});
 
 Route::get('home', function () {
     return view('home', [
@@ -39,3 +44,5 @@ Route::get('/about', function () {
         "email" => "aryawira@gmail.com"
     ]);
 });
+
+Route::get('/authors/{author:username}', [PostController::class, 'indexAuthor']);

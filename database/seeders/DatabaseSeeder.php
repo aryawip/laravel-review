@@ -17,13 +17,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(3)->create();
 
-        User::create([
-            'name' => 'Arya Wira',
-            'email' => 'aryawira@gmail.com',
-            'password' => bcrypt('12345')
-        ]);
+        Post::factory(20)->create();
+
+        // User::create([
+        //     'name' => 'Arya Wira',
+        //     'email' => 'aryawira@gmail.com',
+        //     'password' => bcrypt('12345')
+        // ]);
 
         Category::create([
             'name' => 'Web Programming',
@@ -35,24 +37,13 @@ class DatabaseSeeder extends Seeder
             'slug' => 'personal'
         ]);
 
-        Post::create([
-            'title' => 'Belajar Laravel',
-            'slug' => 'belajar-laravel',
-            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta o',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati vel dolor assumenda, ipsa dignissimos ut quod repellendus libero quia, ipsum excepturi facilis. Reiciendis velit eligendi consequatur odit pariatur iure similique quam dignissimos repellat suscipit excepturi nisi, sapiente nam doloribus veniam in et error consectetur perspiciatis ea enim! Modi velit optio, enim ad explicabo ducimus quis fuga labore quia, sunt repudiandae maxime, necessitatibus commodi molestias odit autem ex! Officia minus voluptate rem atque tempore labore necessitatibus, eos sunt in obcaecati ratione. Hic, voluptas adipisci at aperiam maiores porro error consequuntur qui quos ad veritatis ipsam numquam ratione, accusantium officiis quidem?',
-            'category_id' => 1,
-            'user_id' => 1
-        ]);
-
-        Post::create([
-            'title' => 'Manajemen Waktu',
-            'slug' => 'manajemen-wakru',
-            'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta o',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati vel dolor assumenda, ipsa dignissimos ut quod repellendus libero quia, ipsum excepturi facilis. Reiciendis velit eligendi consequatur odit pariatur iure similique quam dignissimos repellat suscipit excepturi nisi, sapiente nam doloribus veniam in et error consectetur perspiciatis ea enim! Modi velit optio, enim ad explicabo ducimus quis fuga labore quia, sunt repudiandae maxime, necessitatibus commodi molestias odit autem ex! Officia minus voluptate rem atque tempore labore necessitatibus, eos sunt in obcaecati ratione. Hic, voluptas adipisci at aperiam maiores porro error consequuntur qui quos ad veritatis ipsam numquam ratione, accusantium officiis quidem?',
-            'category_id' => 2,
-            'user_id' => 1
-        ]);
-
-
+        // Post::create([
+        //     'title' => 'Belajar Laravel',
+        //     'slug' => 'belajar-laravel',
+        //     'excerpt' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta o',
+        //     'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta obcaecati vel dolor assumenda, ipsa dignissimos ut quod repellendus libero quia, ipsum excepturi facilis. Reiciendis velit eligendi consequatur odit pariatur iure similique quam dignissimos repellat suscipit excepturi nisi, sapiente nam doloribus veniam in et error consectetur perspiciatis ea enim! Modi velit optio, enim ad explicabo ducimus quis fuga labore quia, sunt repudiandae maxime, necessitatibus commodi molestias odit autem ex! Officia minus voluptate rem atque tempore labore necessitatibus, eos sunt in obcaecati ratione. Hic, voluptas adipisci at aperiam maiores porro error consequuntur qui quos ad veritatis ipsam numquam ratione, accusantium officiis quidem?',
+        //     'category_id' => 1,
+        //     'user_id' => 1
+        // ]);
     }
 }
