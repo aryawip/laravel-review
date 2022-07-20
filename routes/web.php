@@ -37,6 +37,8 @@ Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::get('/categories/{category:slug}', [CategoryController::class, 'show']);
 
+Route::get('/authors/{author:username}', [PostController::class, 'indexAuthor']);
+
 Route::get('/about', function () {
     return view('about', [
         "title" => "ABOUT",
@@ -45,4 +47,4 @@ Route::get('/about', function () {
     ]);
 });
 
-Route::get('/authors/{author:username}', [PostController::class, 'indexAuthor']);
+
