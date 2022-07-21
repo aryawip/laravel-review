@@ -8,13 +8,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link {{ $title === "HOME" ? 'active' : ''}}" href="/home">Home</a>
+                    <a class="nav-link {{ $title === "home" ? 'active' : ''}}" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ $title === "ABOUT" ? 'active' : ''}}"" href="/about">About</a>
+                    <a class="nav-link {{ $title === "about" ? 'active' : ''}}"" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ $title === "POST" ? 'active' : ''}}"" href="/posts">Blog</a>
+                    <a class="nav-link {{ $title === "post" ? 'active' : ''}}"" href="/posts">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ $title === "categories" ? 'active' : '' }}"" href="/categories">Categories</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
