@@ -19,13 +19,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "HOME"
+        "title" => "HOME",
+        "active" => 'home'
     ]);
 });
 
 Route::get('home', function () {
     return view('home', [
-        "title" => "HOME"
+        "title" => "HOME",
+        "active" => 'home'
     ]);
 });
 
@@ -42,6 +44,7 @@ Route::get('/authors/{author:username}', [PostController::class, 'indexAuthor'])
 Route::get('/about', function () {
     return view('about', [
         "title" => "ABOUT",
+        "active" => 'about',
         "name" => "Arya Wira Pahlawan",
         "email" => "aryawira@gmail.com"
     ]);
