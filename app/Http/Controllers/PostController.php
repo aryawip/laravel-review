@@ -14,7 +14,7 @@ class PostController extends Controller
             "title" => "All POST",
             "active" => 'posts',
             // "posts" => Post::all()
-            "posts" => Post::latest()->filter(\request(['search']))->get()
+            "posts" => Post::latest()->filter(request(['search', 'category', 'author']))->get()
         ]);
     }
 
@@ -32,6 +32,7 @@ class PostController extends Controller
     {
         return view('posts', [
             'title' => "Post By Author : $author->name",
+            'active' =>'posts',
             'posts' => $author->post->load('category', 'author')
         ]);
     }
