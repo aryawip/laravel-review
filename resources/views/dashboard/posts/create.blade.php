@@ -63,6 +63,7 @@
                 <input id="body" type="hidden" name="body" value="{{ old('body') }}">
                 <trix-editor input="body"></trix-editor>
             </div>
+            <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span>Back</a>
             <button type="submit" class="btn btn-primary">Create post</button>
         </form>
     </div>
@@ -92,10 +93,10 @@
 
             oFReader.onload = function(oFREvent) {
                 imgPreview.src = oFREvent.target.result;
-            
-            // const oFReader = URL.createObjectURL(image.files[0]);
-            //     imgPreview.src = oFReader;
             }
+            
+            // const oFReader = global.URL.createObjectURL(image.files[0]);
+            //     imgPreview.src = oFReader;
         }
     </script>
 @endsection
